@@ -1,4 +1,6 @@
+import 'package:agro_ai/utils/routes/route_names.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -8,6 +10,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 4), () {
+      Get.toNamed(RouteNames.home_screen);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -19,4 +29,5 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
+  
 }
