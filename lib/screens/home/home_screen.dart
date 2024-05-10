@@ -1,3 +1,7 @@
+import 'package:agro_ai/screens/crops_screen.dart';
+import 'package:agro_ai/screens/disease_screen.dart';
+import 'package:agro_ai/screens/fertiliser_screen.dart';
+import 'package:agro_ai/screens/home/home_items.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -8,37 +12,49 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int selectedPage = 0;
+  int _selectedIndex = 0;
+  List<Widget> items = [
+    const HomeItems(),
+    const CropsScreen(),
+    const FertiliserScreen(),
+    const DiseaseScreen()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [],
-        ),
-      ),
+      body: items.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Theme.of(context).colorScheme.primary,
+        currentIndex: _selectedIndex,
         onTap: (value) {
           setState(() {
-            selectedPage = value;
+            _selectedIndex = value;
           });
         },
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: const Icon(Icons.home),
             label: 'Home',
+            backgroundColor:
+                Theme.of(context).colorScheme.inverseSurface.withOpacity(.5),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.filter_vintage_sharp),
+            icon: const Icon(Icons.filter_vintage_sharp),
             label: 'Crops',
+            backgroundColor:
+                Theme.of(context).colorScheme.inverseSurface.withOpacity(.5),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.verified_user),
+            icon: const Icon(Icons.verified_user),
             label: 'Fertiliser',
+            backgroundColor:
+                Theme.of(context).colorScheme.inverseSurface.withOpacity(.5),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.crib_outlined),
+            icon: const Icon(Icons.crib_outlined),
             label: 'Disease',
+            backgroundColor:
+                Theme.of(context).colorScheme.inverseSurface.withOpacity(.5),
           ),
         ],
       ),
