@@ -19,10 +19,10 @@ class _CropsScreenState extends State<CropsScreen> {
   String dropdownvalue = 'Nakuru ';
   var cities = [
     'Nakuru',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-    'Item 5',
+    'Nairobi',
+    'Kisumu',
+    'Meru',
+    'Nyeri',
   ];
   @override
   Widget build(BuildContext context) {
