@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     injectControllers();
     return GetMaterialApp(
       title: 'Flutter Demo',
-      theme: lightTheme,
+      // theme: lightTheme,
       home: const HomeScreen(),
     );
   }

@@ -2,6 +2,7 @@ import 'package:agro_ai/screens/crops_screen.dart';
 import 'package:agro_ai/screens/disease_screen.dart';
 import 'package:agro_ai/screens/fertiliser_screen.dart';
 import 'package:agro_ai/screens/home/home_items.dart';
+import 'package:agro_ai/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,8 +25,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: items.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Theme.of(context).colorScheme.primary,
+        selectedItemColor: Constants.black,
         currentIndex: _selectedIndex,
+        unselectedIconTheme: IconThemeData(
+          color: Constants.grey500,
+        ),
         onTap: (value) {
           setState(() {
             _selectedIndex = value;
@@ -35,26 +39,18 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: const Icon(Icons.home),
             label: 'Home',
-            backgroundColor:
-                Theme.of(context).colorScheme.inverseSurface.withOpacity(.5),
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.filter_vintage_sharp),
             label: 'Crops',
-            backgroundColor:
-                Theme.of(context).colorScheme.inverseSurface.withOpacity(.5),
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.verified_user),
             label: 'Fertiliser',
-            backgroundColor:
-                Theme.of(context).colorScheme.inverseSurface.withOpacity(.5),
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.crib_outlined),
             label: 'Disease',
-            backgroundColor:
-                Theme.of(context).colorScheme.inverseSurface.withOpacity(.5),
           ),
         ],
       ),
