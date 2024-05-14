@@ -1,7 +1,9 @@
+import 'package:agro_ai/screens/complete_processing.dart';
 import 'package:agro_ai/utils/constants.dart';
 import 'package:agro_ai/widgets/primary_text.dart';
 import 'package:agro_ai/widgets/primary_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CropsScreen extends StatefulWidget {
   const CropsScreen({super.key});
@@ -28,7 +30,7 @@ class _CropsScreenState extends State<CropsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: PrimaryText(
+        title: const PrimaryText(
           text: 'Crops',
           color: Colors.black,
           fontSize: 17,
@@ -36,7 +38,7 @@ class _CropsScreenState extends State<CropsScreen> {
         ),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -168,13 +170,9 @@ class _CropsScreenState extends State<CropsScreen> {
               height: 15,
             ),
             ElevatedButton(
-              onPressed: () {},
-              child: PrimaryText(
-                text: 'Submit',
-                color: Colors.white,
-                fontSize: 17,
-                fontWeight: FontWeight.w500,
-              ),
+              onPressed: () {
+                Get.to(const ProcessComplete());
+              },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Constants.black,
                 backgroundColor: Colors.cyan.shade800,
@@ -182,6 +180,12 @@ class _CropsScreenState extends State<CropsScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
+              ),
+              child: const PrimaryText(
+                text: 'Submit',
+                color: Colors.white,
+                fontSize: 17,
+                fontWeight: FontWeight.w500,
               ),
             ),
             const SizedBox(

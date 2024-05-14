@@ -1,8 +1,10 @@
 import 'dart:io';
 
+import 'package:agro_ai/screens/complete_processing.dart';
 import 'package:agro_ai/utils/constants.dart';
 import 'package:agro_ai/widgets/primary_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -259,7 +261,9 @@ class _DiseaseScreenState extends State<DiseaseScreen> {
               height: 25,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const ProcessComplete());
+              },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Constants.black,
                 backgroundColor: Colors.cyan.shade800,

@@ -1,7 +1,9 @@
+import 'package:agro_ai/screens/complete_processing.dart';
 import 'package:agro_ai/utils/constants.dart';
 import 'package:agro_ai/widgets/primary_text.dart';
 import 'package:agro_ai/widgets/primary_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class FertiliserScreen extends StatefulWidget {
   const FertiliserScreen({super.key});
@@ -140,7 +142,9 @@ class _FertiliserScreenState extends State<FertiliserScreen> {
               height: 15,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(const ProcessComplete());
+              },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Constants.black,
                 backgroundColor: Colors.cyan.shade800,
