@@ -1,9 +1,7 @@
 import 'package:agro_ai/utils/constants.dart';
 import 'package:agro_ai/utils/faq.dart';
 import 'package:agro_ai/widgets/primary_text.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeItems extends StatefulWidget {
   const HomeItems({super.key});
@@ -94,10 +92,10 @@ class _HomeItemsState extends State<HomeItems> {
                           fontWeight: FontWeight.w700,
                           fontSize: 20,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
-                        PrimaryText(
+                        const PrimaryText(
                           text:
                               'We use state-of-the-art machine learning and deep learning technologies to help you guide through the entire farming process. Make informed decisions to understand the demographics of your area, understand the factors that affect your crop and keep them healthy for a super awesome successful yield.',
                           color: Colors.white,

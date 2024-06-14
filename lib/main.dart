@@ -1,6 +1,4 @@
-import 'package:agro_ai/screens/home/home_screen.dart';
 import 'package:agro_ai/screens/splash/splash.dart';
-import 'package:agro_ai/themes/light_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,10 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     injectControllers();
-    return GetMaterialApp(
+    return const GetMaterialApp(
       title: 'Flutter Demo',
       // theme: lightTheme,
-      home: const HomeScreen(),
+      home: SplashScreen(),
     );
   }
 

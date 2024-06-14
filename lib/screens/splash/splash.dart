@@ -13,8 +13,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 4), () {
-      Get.toNamed(RouteNames.home_screen);
+    Future.delayed(const Duration(seconds: 4), () {
+      Get.toNamed(RouteNames.homescreen);
     });
   }
 
@@ -29,5 +29,4 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
-  
 }

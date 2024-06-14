@@ -1,6 +1,3 @@
-
-
-
 import 'package:agro_ai/screens/home/home_screen.dart';
 import 'package:agro_ai/screens/splash/splash.dart';
 import 'package:agro_ai/utils/routes/route_names.dart';
@@ -16,11 +13,10 @@ class AppPages {
       page: () => const SplashScreen(),
     ),
     //Auth routes
-    
 
     //home
     GetPage(
-      name: RouteNames.home_screen,
+      name: RouteNames.homescreen,
       page: () => const HomeScreen(),
     ),
   ];

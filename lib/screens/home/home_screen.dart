@@ -35,21 +35,21 @@ class _HomeScreenState extends State<HomeScreen> {
             _selectedIndex = value;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
-            icon: const Icon(Icons.home),
+            icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.filter_vintage_sharp),
+            icon: Icon(Icons.filter_vintage_sharp),
             label: 'Crops',
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.verified_user),
+            icon: Icon(Icons.verified_user),
             label: 'Fertiliser',
           ),
           BottomNavigationBarItem(
-            icon: const Icon(Icons.crib_outlined),
+            icon: Icon(Icons.crib_outlined),
             label: 'Disease',
           ),
         ],
